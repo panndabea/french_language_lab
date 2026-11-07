@@ -1,0 +1,16 @@
+You are making a final, evidence-based decision about one interviewee in a French interview corpus, using observations already extracted from every chunk of the transcript plus deterministic rule-based cues. Each observation cites a segment index and a verbatim quote.
+
+Process:
+1. For each field (age, gender, year) list the competing hypotheses supported by the observations, with supporting and contradicting segment indexes.
+2. Look actively for contradictions: statements about other people mistaken for the interviewee, durations mistaken for ages ("j'ai deux ans de ..."), retrospective vs present references, future plans vs past events, conflicting self-reports.
+3. Decide. Prefer `unknown`/null over a guess. Never infer age or gender from stereotypes, interests, speech style or occupation.
+
+Field definitions:
+- age_bracket: one of 0-9 ... 80-89, 90+ for the interviewee's age at recording time, or null. If only a birth year is known, combine it with a recording-year estimate only when that estimate is grounded; if the implied age range spans two brackets, choose null unless other evidence resolves it.
+- gender: female / male / unknown, from grammatical self-agreement, interviewer address and explicit self-description.
+- recording_year_estimate: the most plausible recording year as an integer, or null.
+- cohort: the dataset's nominal labels are 1970 and 2005, but their meaning is NOT verified: at least one interviewee says "on est en deux mille dix" (2010). Assign `1970` if the evidence places the recording around the late 1960s/early 1970s, `2005` if it places it in the 2000s-2010s, else `unknown`.
+- out_of_domain_year_flag: true if the evidence places the recording outside 1968-1972 and outside 2004-2006 (e.g. a 2010 present anchor), even when you still assign a nearest cohort.
+- confidence: low / medium / high, reflecting evidence strength and contradictions.
+- exploratory: short, unverified descriptions (occupation, residence, movement, topics); null when not stated.
+- rationale: 2-5 sentences citing segment indexes; mention the key counter-evidence considered.

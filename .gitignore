@@ -1,0 +1,51 @@
+# API Keys & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*secret*
+*credentials*
+*api_key*
+
+# Ground Truth / Solutions
+*ground_truth*
+*ground-truth*
+*groundtruth*
+*gold_standard*
+*answer_key*
+*solutions*
+
+# Original Interview Data
+impactLab.zip
+*.trs
+data/
+transcripts/
+interviews/
+*.sqlite
+*.sqlite3
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Logs & Temporary Files
+*.log
+logs/
+tmp/
+temp/
+.DS_Store
+
+# Local Claude Settings
+.claude/settings.local.json
+
+# Generated Data (review before sharing)
+outputs/
+results/
+predictions*.csv
+*evaluation*.csv

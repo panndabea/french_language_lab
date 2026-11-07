@@ -1,0 +1,21 @@
+# Tasks
+
+- [x] Inventory real ZIP and inspect TRS speaker/turn structure.
+- [x] Implement deterministic parser and conservative baseline; add regression tests.
+- [x] Produce initial baseline files; preserve evidence.
+- [x] Validate archive-level mixed-speaker turns and audio-year contradictions beyond S035. (segments.py: Who-split overlaps; 8 out-of-domain interviews; 3 with "on est en deux mille dix")
+- [x] Deterministic v2 rules (French number words, gender cues, era cues, citation validator) → frozen `outputs/predictions.csv` + `outputs/evidence.json` (FREEZE_rules_v2.json).
+- [x] Add a dedicated extraction JSON schema + strict schema validator. (src/llm_schema.py)
+- [x] Create a chunked Claude inference script with approval/budget guard and call cache. (src/llm_infer.py; plan-only by default)
+- [x] User approved pilot ($3 cap, Opus 5.5, S035,S002,S163,S001,S010) + data permission; key supplied.
+- [x] Resolved by ground truth: 1970/2005 = waves ESLO1/ESLO2 (was: clarify whether 1970/2005 are recording years or cohort labels (evidence: S035/S163/S192 present-anchor 2010; 8 interviews >2005).
+- [x] Dry-run on 5 transcripts: 0 grounding errors, no rule disagreements; S002 "married at 21" first flagged by me, then confirmed by seg 2117 (my error). ≈$2.94 incl. v3 re-check.
+- [x] Verify structured-output schema: API rejected enum+type-array (400); fixed with sentinels; verified on 15 calls.
+- [x] decide_v3 inference-discipline prompt; rules_v2.5 split-segment ages + singular 'an' ('j'ai eu N' left to LLM: ambiguous).
+- [x] decide_v3 re-check on 5 pilot decisions ($0.22): 0 errors, decisions stable.
+- [~] Run all 192 — HARD-STOPPED by user at 16:00:52 after 101/192 (completed 99, failed 3, unprocessed 90). $39.76 full run.
+- [x] Offline recovery from cache (src/recover.py) + freeze (src/freeze.py): predictions_frozen.csv, evidence_frozen.json, REPRODUCIBILITY_SNAPSHOT.json.
+- [x] Phase 2: src/evaluate_full.py + evaluation against ~/Downloads/impactLab/lab_blind_speakers.tsv (after freeze) → evaluation/.
+- [x] Phase 3: FINAL_RESEARCH_REPORT.md, figures/fig1–5, evaluation/results_table.{csv,md}.
+- [-] DEFERRED by user's hard-stop instruction (no new transcript analyses / inference calls; evaluation + reporting only; no changes after GT access): one-pass baseline on 90 held-out interviews (§11, design + cost in report); 'monsieur' rule fix (must be validated on new data only); gold age definition question (for organizers).
+- [x] Birth-year cues: interviewer question confirmed by interviewee; two-digit years with century candidates; implied recording year (birth + age) → rules_v2.4, re-frozen.

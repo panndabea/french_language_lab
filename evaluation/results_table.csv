@@ -1,0 +1,17 @@
+field,scope,n,answered,coverage,accuracy_when_answered,accuracy_all_items,macro_f1_answered,adjacent_accuracy
+Gender,All 192 (frozen: LLM 99 + rules fallback 93),192,185,0.9635,0.9946,0.9583,0.9946,
+Gender,LLM-completed subset (n=99): LLM,99,99,1.0,1.0,1.0,1.0,
+Gender,LLM-completed subset (n=99): rules only,99,86,0.8687,1.0,0.8687,1.0,
+Gender,Rules-fallback subset (n=93),93,86,0.9247,0.9884,0.914,0.9882,
+Age bracket,All 192 (frozen: LLM 99 + rules fallback 93),192,76,0.3958,0.8816,0.349,0.7728,1.0
+Age bracket,LLM-completed subset (n=99): LLM,99,68,0.6869,0.8676,0.596,0.736,1.0
+Age bracket,LLM-completed subset (n=99): rules only,99,14,0.1414,0.9286,0.1313,0.5583,1.0
+Age bracket,Rules-fallback subset (n=93),93,8,0.086,1.0,0.086,0.6667,1.0
+Wave (cohort label),All 192 (frozen: LLM 99 + rules fallback 93),192,148,0.7708,1.0,0.7708,1.0,
+Wave (cohort label),LLM-completed subset (n=99): LLM,99,99,1.0,1.0,1.0,1.0,
+Wave (cohort label),LLM-completed subset (n=99): rules only,99,59,0.596,1.0,0.596,1.0,
+Wave (cohort label),Rules-fallback subset (n=93),93,49,0.5269,1.0,0.5269,1.0,
+Interview year (strict; blank if out-of-domain),All 192 (frozen: LLM 99 + rules fallback 93),192,107,0.5573,1.0,0.5573,1.0,
+Interview year (strict; blank if out-of-domain),LLM-completed subset (n=99): LLM,99,59,0.596,1.0,0.596,0.5,
+Interview year (strict; blank if out-of-domain),LLM-completed subset (n=99): rules only,99,50,0.5051,1.0,0.5051,1.0,
+Interview year (strict; blank if out-of-domain),Rules-fallback subset (n=93),93,48,0.5161,1.0,0.5161,1.0,

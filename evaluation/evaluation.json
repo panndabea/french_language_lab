@@ -1,0 +1,1402 @@
+{
+  "matching": {
+    "n_predictions": 192,
+    "n_gold": 192,
+    "n_matched": 192,
+    "missing_predictions": [],
+    "predictions_without_gold": [],
+    "unmapped_gold_values": []
+  },
+  "errors": [
+    {
+      "id": "S118",
+      "field": "gender",
+      "gold": "female",
+      "pred": "male",
+      "source": "rules_fallback",
+      "confidence": "none",
+      "rules_pred": "male"
+    },
+    {
+      "id": "S003",
+      "field": "age_bracket",
+      "gold": "50-59",
+      "pred": "40-49",
+      "source": "llm",
+      "confidence": "low",
+      "rules_pred": null
+    },
+    {
+      "id": "S023",
+      "field": "age_bracket",
+      "gold": "50-59",
+      "pred": "40-49",
+      "source": "llm",
+      "confidence": "low",
+      "rules_pred": null
+    },
+    {
+      "id": "S025",
+      "field": "age_bracket",
+      "gold": "80-89",
+      "pred": "70-79",
+      "source": "llm",
+      "confidence": "high",
+      "rules_pred": null
+    },
+    {
+      "id": "S067",
+      "field": "age_bracket",
+      "gold": "20-29",
+      "pred": "10-19",
+      "source": "llm",
+      "confidence": "low",
+      "rules_pred": null
+    },
+    {
+      "id": "S068",
+      "field": "age_bracket",
+      "gold": "40-49",
+      "pred": "50-59",
+      "source": "llm",
+      "confidence": "low",
+      "rules_pred": null
+    },
+    {
+      "id": "S069",
+      "field": "age_bracket",
+      "gold": "30-39",
+      "pred": "20-29",
+      "source": "llm",
+      "confidence": "low",
+      "rules_pred": null
+    },
+    {
+      "id": "S077",
+      "field": "age_bracket",
+      "gold": "70-79",
+      "pred": "60-69",
+      "source": "llm",
+      "confidence": "low",
+      "rules_pred": null
+    },
+    {
+      "id": "S093",
+      "field": "age_bracket",
+      "gold": "50-59",
+      "pred": "60-69",
+      "source": "llm",
+      "confidence": "high",
+      "rules_pred": "60-69"
+    },
+    {
+      "id": "S163",
+      "field": "age_bracket",
+      "gold": "30-39",
+      "pred": "20-29",
+      "source": "llm",
+      "confidence": "high",
+      "rules_pred": null
+    }
+  ],
+  "selection_bias": {
+    "gender": {
+      "processed": {
+        "male": 51,
+        "female": 51
+      },
+      "unprocessed": {
+        "male": 41,
+        "female": 49
+      }
+    },
+    "age_bracket": {
+      "processed": {
+        "60-69": 15,
+        "30-39": 22,
+        "50-59": 17,
+        "20-29": 16,
+        "40-49": 27,
+        "10-19": 1,
+        "80-89": 3,
+        "70-79": 1
+      },
+      "unprocessed": {
+        "30-39": 17,
+        "60-69": 12,
+        "20-29": 21,
+        "50-59": 15,
+        "70-79": 6,
+        "90+": 1,
+        "10-19": 2,
+        "40-49": 13,
+        "80-89": 3
+      }
+    },
+    "interview_year": {
+      "processed": {
+        "1970": 61,
+        "2005": 41
+      },
+      "unprocessed": {
+        "2005": 34,
+        "1970": 56
+      }
+    }
+  },
+  "gender": {
+    "overall": {
+      "n_gold": 192,
+      "answered": 185,
+      "abstained": 7,
+      "coverage": 0.9635,
+      "abstention_rate": 0.0365,
+      "correct": 184,
+      "accuracy_when_answered": 0.9946,
+      "accuracy_all_items": 0.9583,
+      "macro_f1_answered": 0.9946,
+      "macro_f1_abstain_as_wrong": 0.976,
+      "confusion": {
+        "female": {
+          "female": 96,
+          "abstain": 3,
+          "male": 1
+        },
+        "male": {
+          "male": 88,
+          "abstain": 4
+        }
+      }
+    },
+    "by_source": {
+      "llm": {
+        "n_gold": 99,
+        "answered": 99,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 99,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "female": {
+            "female": 49
+          },
+          "male": {
+            "male": 50
+          }
+        }
+      },
+      "rules_fallback": {
+        "n_gold": 93,
+        "answered": 86,
+        "abstained": 7,
+        "coverage": 0.9247,
+        "abstention_rate": 0.0753,
+        "correct": 85,
+        "accuracy_when_answered": 0.9884,
+        "accuracy_all_items": 0.914,
+        "macro_f1_answered": 0.9882,
+        "macro_f1_abstain_as_wrong": 0.9487,
+        "confusion": {
+          "female": {
+            "female": 47,
+            "abstain": 3,
+            "male": 1
+          },
+          "male": {
+            "male": 38,
+            "abstain": 4
+          }
+        }
+      }
+    },
+    "by_llm_status": {
+      "completed": {
+        "n_gold": 99,
+        "answered": 99,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 99,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "female": {
+            "female": 49
+          },
+          "male": {
+            "male": 50
+          }
+        }
+      },
+      "failed": {
+        "n_gold": 3,
+        "answered": 3,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 3,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "female": {
+            "female": 2
+          },
+          "male": {
+            "male": 1
+          }
+        }
+      },
+      "unprocessed": {
+        "n_gold": 90,
+        "answered": 83,
+        "abstained": 7,
+        "coverage": 0.9222,
+        "abstention_rate": 0.0778,
+        "correct": 82,
+        "accuracy_when_answered": 0.988,
+        "accuracy_all_items": 0.9111,
+        "macro_f1_answered": 0.9878,
+        "macro_f1_abstain_as_wrong": 0.9471,
+        "confusion": {
+          "female": {
+            "female": 45,
+            "abstain": 3,
+            "male": 1
+          },
+          "male": {
+            "male": 37,
+            "abstain": 4
+          }
+        }
+      }
+    },
+    "by_confidence": {
+      "high": {
+        "n_gold": 98,
+        "answered": 98,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 98,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "female": {
+            "female": 49
+          },
+          "male": {
+            "male": 49
+          }
+        }
+      },
+      "medium": {
+        "n_gold": 1,
+        "answered": 1,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 1,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "male": {
+            "male": 1
+          }
+        }
+      },
+      "none": {
+        "n_gold": 93,
+        "answered": 86,
+        "abstained": 7,
+        "coverage": 0.9247,
+        "abstention_rate": 0.0753,
+        "correct": 85,
+        "accuracy_when_answered": 0.9884,
+        "accuracy_all_items": 0.914,
+        "macro_f1_answered": 0.9882,
+        "macro_f1_abstain_as_wrong": 0.9487,
+        "confusion": {
+          "female": {
+            "female": 47,
+            "abstain": 3,
+            "male": 1
+          },
+          "male": {
+            "male": 38,
+            "abstain": 4
+          }
+        }
+      }
+    },
+    "paired_on_llm_subset": {
+      "llm": {
+        "n_gold": 99,
+        "answered": 99,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 99,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "female": {
+            "female": 49
+          },
+          "male": {
+            "male": 50
+          }
+        }
+      },
+      "rules": {
+        "n_gold": 99,
+        "answered": 86,
+        "abstained": 13,
+        "coverage": 0.8687,
+        "abstention_rate": 0.1313,
+        "correct": 86,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.8687,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.9296,
+        "confusion": {
+          "female": {
+            "female": 44,
+            "abstain": 5
+          },
+          "male": {
+            "male": 42,
+            "abstain": 8
+          }
+        }
+      }
+    }
+  },
+  "age_bracket": {
+    "overall": {
+      "n_gold": 192,
+      "answered": 76,
+      "abstained": 116,
+      "coverage": 0.3958,
+      "abstention_rate": 0.6042,
+      "correct": 67,
+      "accuracy_when_answered": 0.8816,
+      "accuracy_all_items": 0.349,
+      "macro_f1_answered": 0.7728,
+      "macro_f1_abstain_as_wrong": 0.4975,
+      "confusion": {
+        "10-19": {
+          "10-19": 1,
+          "abstain": 2
+        },
+        "20-29": {
+          "20-29": 12,
+          "abstain": 24,
+          "10-19": 1
+        },
+        "30-39": {
+          "30-39": 12,
+          "abstain": 25,
+          "20-29": 2
+        },
+        "40-49": {
+          "abstain": 23,
+          "40-49": 16,
+          "50-59": 1
+        },
+        "50-59": {
+          "40-49": 2,
+          "50-59": 10,
+          "abstain": 19,
+          "60-69": 1
+        },
+        "60-69": {
+          "60-69": 13,
+          "abstain": 14
+        },
+        "70-79": {
+          "60-69": 1,
+          "abstain": 6
+        },
+        "80-89": {
+          "80-89": 2,
+          "70-79": 1,
+          "abstain": 3
+        },
+        "90+": {
+          "90+": 1
+        }
+      },
+      "exact_accuracy": 0.8816,
+      "adjacent_accuracy": 1.0,
+      "bin_error_distribution": {
+        "-1": 7,
+        "0": 67,
+        "1": 2
+      },
+      "mean_abs_bin_error": 0.1184
+    },
+    "by_source": {
+      "llm": {
+        "n_gold": 99,
+        "answered": 68,
+        "abstained": 31,
+        "coverage": 0.6869,
+        "abstention_rate": 0.3131,
+        "correct": 59,
+        "accuracy_when_answered": 0.8676,
+        "accuracy_all_items": 0.596,
+        "macro_f1_answered": 0.736,
+        "macro_f1_abstain_as_wrong": 0.632,
+        "confusion": {
+          "10-19": {
+            "10-19": 1
+          },
+          "20-29": {
+            "20-29": 11,
+            "abstain": 3,
+            "10-19": 1
+          },
+          "30-39": {
+            "30-39": 10,
+            "abstain": 10,
+            "20-29": 2
+          },
+          "40-49": {
+            "abstain": 11,
+            "40-49": 15,
+            "50-59": 1
+          },
+          "50-59": {
+            "40-49": 2,
+            "50-59": 8,
+            "abstain": 5,
+            "60-69": 1
+          },
+          "60-69": {
+            "60-69": 12,
+            "abstain": 2
+          },
+          "70-79": {
+            "60-69": 1
+          },
+          "80-89": {
+            "80-89": 2,
+            "70-79": 1
+          }
+        },
+        "exact_accuracy": 0.8676,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "-1": 7,
+          "0": 59,
+          "1": 2
+        },
+        "mean_abs_bin_error": 0.1324
+      },
+      "rules_fallback": {
+        "n_gold": 93,
+        "answered": 8,
+        "abstained": 85,
+        "coverage": 0.086,
+        "abstention_rate": 0.914,
+        "correct": 8,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.086,
+        "macro_f1_answered": 0.6667,
+        "macro_f1_abstain_as_wrong": 0.2006,
+        "confusion": {
+          "10-19": {
+            "abstain": 2
+          },
+          "20-29": {
+            "abstain": 21,
+            "20-29": 1
+          },
+          "30-39": {
+            "30-39": 2,
+            "abstain": 15
+          },
+          "40-49": {
+            "abstain": 12,
+            "40-49": 1
+          },
+          "50-59": {
+            "50-59": 2,
+            "abstain": 14
+          },
+          "60-69": {
+            "abstain": 12,
+            "60-69": 1
+          },
+          "70-79": {
+            "abstain": 6
+          },
+          "80-89": {
+            "abstain": 3
+          },
+          "90+": {
+            "90+": 1
+          }
+        },
+        "exact_accuracy": 1.0,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "0": 8
+        },
+        "mean_abs_bin_error": 0.0
+      }
+    },
+    "by_llm_status": {
+      "completed": {
+        "n_gold": 99,
+        "answered": 68,
+        "abstained": 31,
+        "coverage": 0.6869,
+        "abstention_rate": 0.3131,
+        "correct": 59,
+        "accuracy_when_answered": 0.8676,
+        "accuracy_all_items": 0.596,
+        "macro_f1_answered": 0.736,
+        "macro_f1_abstain_as_wrong": 0.632,
+        "confusion": {
+          "10-19": {
+            "10-19": 1
+          },
+          "20-29": {
+            "20-29": 11,
+            "abstain": 3,
+            "10-19": 1
+          },
+          "30-39": {
+            "30-39": 10,
+            "abstain": 10,
+            "20-29": 2
+          },
+          "40-49": {
+            "abstain": 11,
+            "40-49": 15,
+            "50-59": 1
+          },
+          "50-59": {
+            "40-49": 2,
+            "50-59": 8,
+            "abstain": 5,
+            "60-69": 1
+          },
+          "60-69": {
+            "60-69": 12,
+            "abstain": 2
+          },
+          "70-79": {
+            "60-69": 1
+          },
+          "80-89": {
+            "80-89": 2,
+            "70-79": 1
+          }
+        },
+        "exact_accuracy": 0.8676,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "-1": 7,
+          "0": 59,
+          "1": 2
+        },
+        "mean_abs_bin_error": 0.1324
+      },
+      "failed": {
+        "n_gold": 3,
+        "answered": 1,
+        "abstained": 2,
+        "coverage": 0.3333,
+        "abstention_rate": 0.6667,
+        "correct": 1,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.3333,
+        "macro_f1_answered": 0.3333,
+        "macro_f1_abstain_as_wrong": 0.3333,
+        "confusion": {
+          "20-29": {
+            "abstain": 1
+          },
+          "50-59": {
+            "50-59": 1
+          },
+          "60-69": {
+            "abstain": 1
+          }
+        },
+        "exact_accuracy": 1.0,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "0": 1
+        },
+        "mean_abs_bin_error": 0.0
+      },
+      "unprocessed": {
+        "n_gold": 90,
+        "answered": 7,
+        "abstained": 83,
+        "coverage": 0.0778,
+        "abstention_rate": 0.9222,
+        "correct": 7,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.0778,
+        "macro_f1_answered": 0.6667,
+        "macro_f1_abstain_as_wrong": 0.1915,
+        "confusion": {
+          "10-19": {
+            "abstain": 2
+          },
+          "20-29": {
+            "abstain": 20,
+            "20-29": 1
+          },
+          "30-39": {
+            "30-39": 2,
+            "abstain": 15
+          },
+          "40-49": {
+            "abstain": 12,
+            "40-49": 1
+          },
+          "50-59": {
+            "abstain": 14,
+            "50-59": 1
+          },
+          "60-69": {
+            "abstain": 11,
+            "60-69": 1
+          },
+          "70-79": {
+            "abstain": 6
+          },
+          "80-89": {
+            "abstain": 3
+          },
+          "90+": {
+            "90+": 1
+          }
+        },
+        "exact_accuracy": 1.0,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "0": 7
+        },
+        "mean_abs_bin_error": 0.0
+      }
+    },
+    "by_confidence": {
+      "high": {
+        "n_gold": 29,
+        "answered": 29,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 26,
+        "accuracy_when_answered": 0.8966,
+        "accuracy_all_items": 0.8966,
+        "macro_f1_answered": 0.8856,
+        "macro_f1_abstain_as_wrong": 0.8856,
+        "confusion": {
+          "10-19": {
+            "10-19": 1
+          },
+          "20-29": {
+            "20-29": 3
+          },
+          "30-39": {
+            "30-39": 5,
+            "20-29": 1
+          },
+          "40-49": {
+            "40-49": 8
+          },
+          "50-59": {
+            "50-59": 5,
+            "60-69": 1
+          },
+          "60-69": {
+            "60-69": 3
+          },
+          "80-89": {
+            "70-79": 1,
+            "80-89": 1
+          }
+        },
+        "exact_accuracy": 0.8966,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "-1": 2,
+          "0": 26,
+          "1": 1
+        },
+        "mean_abs_bin_error": 0.1034
+      },
+      "low": {
+        "n_gold": 51,
+        "answered": 20,
+        "abstained": 31,
+        "coverage": 0.3922,
+        "abstention_rate": 0.6078,
+        "correct": 14,
+        "accuracy_when_answered": 0.7,
+        "accuracy_all_items": 0.2745,
+        "macro_f1_answered": 0.5944,
+        "macro_f1_abstain_as_wrong": 0.3503,
+        "confusion": {
+          "20-29": {
+            "abstain": 3,
+            "20-29": 3,
+            "10-19": 1
+          },
+          "30-39": {
+            "30-39": 4,
+            "abstain": 10,
+            "20-29": 1
+          },
+          "40-49": {
+            "abstain": 11,
+            "40-49": 4,
+            "50-59": 1
+          },
+          "50-59": {
+            "40-49": 2,
+            "abstain": 5,
+            "50-59": 1
+          },
+          "60-69": {
+            "abstain": 2,
+            "60-69": 2
+          },
+          "70-79": {
+            "60-69": 1
+          }
+        },
+        "exact_accuracy": 0.7,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "-1": 5,
+          "0": 14,
+          "1": 1
+        },
+        "mean_abs_bin_error": 0.3
+      },
+      "medium": {
+        "n_gold": 19,
+        "answered": 19,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 19,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "20-29": {
+            "20-29": 5
+          },
+          "30-39": {
+            "30-39": 1
+          },
+          "40-49": {
+            "40-49": 3
+          },
+          "50-59": {
+            "50-59": 2
+          },
+          "60-69": {
+            "60-69": 7
+          },
+          "80-89": {
+            "80-89": 1
+          }
+        },
+        "exact_accuracy": 1.0,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "0": 19
+        },
+        "mean_abs_bin_error": 0.0
+      },
+      "none": {
+        "n_gold": 93,
+        "answered": 8,
+        "abstained": 85,
+        "coverage": 0.086,
+        "abstention_rate": 0.914,
+        "correct": 8,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.086,
+        "macro_f1_answered": 0.6667,
+        "macro_f1_abstain_as_wrong": 0.2006,
+        "confusion": {
+          "10-19": {
+            "abstain": 2
+          },
+          "20-29": {
+            "abstain": 21,
+            "20-29": 1
+          },
+          "30-39": {
+            "30-39": 2,
+            "abstain": 15
+          },
+          "40-49": {
+            "abstain": 12,
+            "40-49": 1
+          },
+          "50-59": {
+            "50-59": 2,
+            "abstain": 14
+          },
+          "60-69": {
+            "abstain": 12,
+            "60-69": 1
+          },
+          "70-79": {
+            "abstain": 6
+          },
+          "80-89": {
+            "abstain": 3
+          },
+          "90+": {
+            "90+": 1
+          }
+        },
+        "exact_accuracy": 1.0,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "0": 8
+        },
+        "mean_abs_bin_error": 0.0
+      }
+    },
+    "paired_on_llm_subset": {
+      "llm": {
+        "n_gold": 99,
+        "answered": 68,
+        "abstained": 31,
+        "coverage": 0.6869,
+        "abstention_rate": 0.3131,
+        "correct": 59,
+        "accuracy_when_answered": 0.8676,
+        "accuracy_all_items": 0.596,
+        "macro_f1_answered": 0.736,
+        "macro_f1_abstain_as_wrong": 0.632,
+        "confusion": {
+          "10-19": {
+            "10-19": 1
+          },
+          "20-29": {
+            "20-29": 11,
+            "abstain": 3,
+            "10-19": 1
+          },
+          "30-39": {
+            "30-39": 10,
+            "abstain": 10,
+            "20-29": 2
+          },
+          "40-49": {
+            "abstain": 11,
+            "40-49": 15,
+            "50-59": 1
+          },
+          "50-59": {
+            "40-49": 2,
+            "50-59": 8,
+            "abstain": 5,
+            "60-69": 1
+          },
+          "60-69": {
+            "60-69": 12,
+            "abstain": 2
+          },
+          "70-79": {
+            "60-69": 1
+          },
+          "80-89": {
+            "80-89": 2,
+            "70-79": 1
+          }
+        },
+        "exact_accuracy": 0.8676,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "-1": 7,
+          "0": 59,
+          "1": 2
+        },
+        "mean_abs_bin_error": 0.1324
+      },
+      "rules": {
+        "n_gold": 99,
+        "answered": 14,
+        "abstained": 85,
+        "coverage": 0.1414,
+        "abstention_rate": 0.8586,
+        "correct": 13,
+        "accuracy_when_answered": 0.9286,
+        "accuracy_all_items": 0.1313,
+        "macro_f1_answered": 0.5583,
+        "macro_f1_abstain_as_wrong": 0.1426,
+        "confusion": {
+          "10-19": {
+            "abstain": 1
+          },
+          "20-29": {
+            "abstain": 13,
+            "20-29": 2
+          },
+          "30-39": {
+            "abstain": 19,
+            "30-39": 3
+          },
+          "40-49": {
+            "abstain": 22,
+            "40-49": 5
+          },
+          "50-59": {
+            "abstain": 14,
+            "50-59": 1,
+            "60-69": 1
+          },
+          "60-69": {
+            "60-69": 2,
+            "abstain": 12
+          },
+          "70-79": {
+            "abstain": 1
+          },
+          "80-89": {
+            "abstain": 3
+          }
+        },
+        "exact_accuracy": 0.9286,
+        "adjacent_accuracy": 1.0,
+        "bin_error_distribution": {
+          "0": 13,
+          "1": 1
+        },
+        "mean_abs_bin_error": 0.0714
+      }
+    }
+  },
+  "interview_year_strict": {
+    "overall": {
+      "n_gold": 192,
+      "answered": 107,
+      "abstained": 85,
+      "coverage": 0.5573,
+      "abstention_rate": 0.4427,
+      "correct": 107,
+      "accuracy_when_answered": 1.0,
+      "accuracy_all_items": 0.5573,
+      "macro_f1_answered": 1.0,
+      "macro_f1_abstain_as_wrong": 0.6526,
+      "confusion": {
+        "1970": {
+          "1970": 84,
+          "abstain": 33
+        },
+        "2005": {
+          "abstain": 52,
+          "2005": 23
+        }
+      }
+    },
+    "by_source": {
+      "llm": {
+        "n_gold": 99,
+        "answered": 59,
+        "abstained": 40,
+        "coverage": 0.596,
+        "abstention_rate": 0.404,
+        "correct": 59,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.596,
+        "macro_f1_answered": 0.5,
+        "macro_f1_abstain_as_wrong": 0.5,
+        "confusion": {
+          "1970": {
+            "1970": 59
+          },
+          "2005": {
+            "abstain": 40
+          }
+        }
+      },
+      "rules_fallback": {
+        "n_gold": 93,
+        "answered": 48,
+        "abstained": 45,
+        "coverage": 0.5161,
+        "abstention_rate": 0.4839,
+        "correct": 48,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.5161,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.6978,
+        "confusion": {
+          "1970": {
+            "1970": 25,
+            "abstain": 33
+          },
+          "2005": {
+            "abstain": 12,
+            "2005": 23
+          }
+        }
+      }
+    },
+    "by_llm_status": {
+      "completed": {
+        "n_gold": 99,
+        "answered": 59,
+        "abstained": 40,
+        "coverage": 0.596,
+        "abstention_rate": 0.404,
+        "correct": 59,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.596,
+        "macro_f1_answered": 0.5,
+        "macro_f1_abstain_as_wrong": 0.5,
+        "confusion": {
+          "1970": {
+            "1970": 59
+          },
+          "2005": {
+            "abstain": 40
+          }
+        }
+      },
+      "failed": {
+        "n_gold": 3,
+        "answered": 2,
+        "abstained": 1,
+        "coverage": 0.6667,
+        "abstention_rate": 0.3333,
+        "correct": 2,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.6667,
+        "macro_f1_answered": 0.5,
+        "macro_f1_abstain_as_wrong": 0.5,
+        "confusion": {
+          "1970": {
+            "1970": 2
+          },
+          "2005": {
+            "abstain": 1
+          }
+        }
+      },
+      "unprocessed": {
+        "n_gold": 90,
+        "answered": 46,
+        "abstained": 44,
+        "coverage": 0.5111,
+        "abstention_rate": 0.4889,
+        "correct": 46,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.5111,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.6946,
+        "confusion": {
+          "1970": {
+            "abstain": 33,
+            "1970": 23
+          },
+          "2005": {
+            "2005": 23,
+            "abstain": 11
+          }
+        }
+      }
+    },
+    "by_confidence": {
+      "n/a": {
+        "n_gold": 192,
+        "answered": 107,
+        "abstained": 85,
+        "coverage": 0.5573,
+        "abstention_rate": 0.4427,
+        "correct": 107,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.5573,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.6526,
+        "confusion": {
+          "1970": {
+            "1970": 84,
+            "abstain": 33
+          },
+          "2005": {
+            "abstain": 52,
+            "2005": 23
+          }
+        }
+      }
+    },
+    "paired_on_llm_subset": {
+      "llm": {
+        "n_gold": 99,
+        "answered": 59,
+        "abstained": 40,
+        "coverage": 0.596,
+        "abstention_rate": 0.404,
+        "correct": 59,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.596,
+        "macro_f1_answered": 0.5,
+        "macro_f1_abstain_as_wrong": 0.5,
+        "confusion": {
+          "1970": {
+            "1970": 59
+          },
+          "2005": {
+            "abstain": 40
+          }
+        }
+      },
+      "rules": {
+        "n_gold": 99,
+        "answered": 50,
+        "abstained": 49,
+        "coverage": 0.5051,
+        "abstention_rate": 0.4949,
+        "correct": 50,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.5051,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.6822,
+        "confusion": {
+          "1970": {
+            "1970": 25,
+            "abstain": 34
+          },
+          "2005": {
+            "abstain": 15,
+            "2005": 25
+          }
+        }
+      }
+    }
+  },
+  "cohort_hypothesis": {
+    "overall": {
+      "n_gold": 192,
+      "answered": 148,
+      "abstained": 44,
+      "coverage": 0.7708,
+      "abstention_rate": 0.2292,
+      "correct": 148,
+      "accuracy_when_answered": 1.0,
+      "accuracy_all_items": 0.7708,
+      "macro_f1_answered": 1.0,
+      "macro_f1_abstain_as_wrong": 0.8783,
+      "confusion": {
+        "1970": {
+          "1970": 84,
+          "abstain": 33
+        },
+        "2005": {
+          "2005": 64,
+          "abstain": 11
+        }
+      }
+    },
+    "by_source": {
+      "llm": {
+        "n_gold": 99,
+        "answered": 99,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 99,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "1970": {
+            "1970": 59
+          },
+          "2005": {
+            "2005": 40
+          }
+        }
+      },
+      "rules_fallback": {
+        "n_gold": 93,
+        "answered": 49,
+        "abstained": 44,
+        "coverage": 0.5269,
+        "abstention_rate": 0.4731,
+        "correct": 49,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.5269,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.708,
+        "confusion": {
+          "1970": {
+            "1970": 25,
+            "abstain": 33
+          },
+          "2005": {
+            "abstain": 11,
+            "2005": 24
+          }
+        }
+      }
+    },
+    "by_llm_status": {
+      "completed": {
+        "n_gold": 99,
+        "answered": 99,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 99,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "1970": {
+            "1970": 59
+          },
+          "2005": {
+            "2005": 40
+          }
+        }
+      },
+      "failed": {
+        "n_gold": 3,
+        "answered": 2,
+        "abstained": 1,
+        "coverage": 0.6667,
+        "abstention_rate": 0.3333,
+        "correct": 2,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.6667,
+        "macro_f1_answered": 0.5,
+        "macro_f1_abstain_as_wrong": 0.5,
+        "confusion": {
+          "1970": {
+            "1970": 2
+          },
+          "2005": {
+            "abstain": 1
+          }
+        }
+      },
+      "unprocessed": {
+        "n_gold": 90,
+        "answered": 47,
+        "abstained": 43,
+        "coverage": 0.5222,
+        "abstention_rate": 0.4778,
+        "correct": 47,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.5222,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.7049,
+        "confusion": {
+          "1970": {
+            "abstain": 33,
+            "1970": 23
+          },
+          "2005": {
+            "2005": 24,
+            "abstain": 10
+          }
+        }
+      }
+    },
+    "by_confidence": {
+      "n/a": {
+        "n_gold": 192,
+        "answered": 148,
+        "abstained": 44,
+        "coverage": 0.7708,
+        "abstention_rate": 0.2292,
+        "correct": 148,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.7708,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.8783,
+        "confusion": {
+          "1970": {
+            "1970": 84,
+            "abstain": 33
+          },
+          "2005": {
+            "2005": 64,
+            "abstain": 11
+          }
+        }
+      }
+    },
+    "paired_on_llm_subset": {
+      "llm": {
+        "n_gold": 99,
+        "answered": 99,
+        "abstained": 0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "correct": 99,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 1.0,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 1.0,
+        "confusion": {
+          "1970": {
+            "1970": 59
+          },
+          "2005": {
+            "2005": 40
+          }
+        }
+      },
+      "rules": {
+        "n_gold": 99,
+        "answered": 59,
+        "abstained": 40,
+        "coverage": 0.596,
+        "abstention_rate": 0.404,
+        "correct": 59,
+        "accuracy_when_answered": 1.0,
+        "accuracy_all_items": 0.596,
+        "macro_f1_answered": 1.0,
+        "macro_f1_abstain_as_wrong": 0.7571,
+        "confusion": {
+          "1970": {
+            "1970": 25,
+            "abstain": 34
+          },
+          "2005": {
+            "abstain": 6,
+            "2005": 34
+          }
+        }
+      }
+    }
+  },
+  "frozen_predictions_sha256": "947d81fa9230b59d1fc24c2d0b7614cd8c417615437cacfd9fdc194825177521"
+}

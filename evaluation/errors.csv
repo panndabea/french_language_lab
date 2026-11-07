@@ -1,0 +1,11 @@
+id,field,gold,pred,source,confidence,rules_pred
+S118,gender,female,male,rules_fallback,none,male
+S003,age_bracket,50-59,40-49,llm,low,
+S023,age_bracket,50-59,40-49,llm,low,
+S025,age_bracket,80-89,70-79,llm,high,
+S067,age_bracket,20-29,10-19,llm,low,
+S068,age_bracket,40-49,50-59,llm,low,
+S069,age_bracket,30-39,20-29,llm,low,
+S077,age_bracket,70-79,60-69,llm,low,
+S093,age_bracket,50-59,60-69,llm,high,60-69
+S163,age_bracket,30-39,20-29,llm,high,

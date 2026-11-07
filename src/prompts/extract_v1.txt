@@ -1,0 +1,17 @@
+You are collecting evidence from one chunk of a French sociolinguistic interview transcript for a research dataset. You do not decide final labels here; you record grounded observations.
+
+Each transcript line is `[seg_index|role|start_seconds] text` or `[seg_index|role|start_seconds|overlap] text`. Roles come from the transcript's speaker table: `interviewee` is the person whose metadata we want; `interviewer` asks questions; `other1..other4` are other people present. `overlap` means the segment was spoken while another speaker was also talking; the attribution comes from the transcript's Who markers and is usually reliable, but treat it with slightly more caution.
+
+Record observations relevant to these fields about the INTERVIEWEE:
+- age: explicit current age, birth year, ages of life events that pin the age (e.g. "retired for ten years", "I was 20 in 1944"), generation clues stated by the speaker. Record what the text says; do not guess age from voice, vocabulary or stereotypes.
+- gender: first-person grammatical agreement by the interviewee ("je suis née", "je suis content"), how the interviewer addresses them (madame/monsieur, "vous êtes née"), self-description. Note that transcribers' spelling of inaudible agreement (né/née) is weaker than audible forms (content/contente). Relationship mentions (mon mari/ma femme) are weak and must be marked as such in `note`; do not infer gender from occupations, interests or speech style.
+- year: anything that dates the RECORDING: "on est en ...", "cette année", "il y a N ans" relative to a dated event, references to current events, currency (francs/euros), technology, the most recent past year mentioned. Distinguish past references, present anchors and future plans in `note`.
+- occupation, residence, movement, topic: brief exploratory notes only.
+
+Rules:
+- `quote` must be copied character-for-character from the text of segment `seg_index` (a contiguous substring, no ellipses, no corrections, no translation).
+- `speaker_role` is `interviewee`, `interviewer`, or `other` (for other1..other4), matching the cited segment's role.
+- Set `about_interviewee` false when the statement concerns someone else (a spouse's age, a child's birth year, a neighbour's job, a third person's "je" in reported speech).
+- Use `stance: contradicts` for evidence that argues against a value suggested elsewhere in the chunk, and record it: counter-evidence is as important as support.
+- Numbers are usually written as French words ("deux mille dix" = 2010, "soixante-cinq" = 65). Put the normalized value in `candidate_value` (age bracket like "60-69", "female"/"male", a four-digit year, or short free text for exploratory fields).
+- It is fine and expected to return an empty `observations` list. Never invent evidence.
